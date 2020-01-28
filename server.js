@@ -44,9 +44,10 @@ http.createServer(app).listen(PORT, () => {
 **/
 function failureResponseMessage(errorMessage='') {
   const twiml = new MessagingResponse();
-  const segments = []
-  segments.push(`We were unable to forward your message to our harm reduction team.`);
-  segments.push(`Please contact ${config.backup} directly.`);
+  const segments = [
+  	`We were unable to forward your message to our harm reduction team.`,
+  	`Please contact ${config.backup} directly.`,
+  ];
   if (errorMessage) segments.push(`ERROR: ${errorMessage}`);
   twiml.message(segments.join('\n'));
   return twiml.toString();
@@ -77,11 +78,11 @@ function forwardMessage(message) {
  * @todo account for multiple body segments (message.NumSegments)
 **/
 function formatForward(message) {
-  const segments = [];
-  segments.push('New harm reduction hotline message!');
-  segments.push(`From: ${message.From}`);
-  segments.push(`Location: ${message.FromCity}, ${message.FromState}, ${message.FromCountry}`);
-  segments.push(`Message: ${message.Body}`);
-  return segments.join('\n');
+  return [
+  	`New harm reduction hotline message!`,
+  	`From: ${message.From}`,
+  	`Location: ${message.FromCity}, ${message.FromState}, ${message.FromCountry}`,
+  	`Message: ${message.Body}`,
+  ].join('\n');
 }
 
