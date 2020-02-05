@@ -13,4 +13,4 @@ jobs:
         pag-repo-token: ${{ secrets.REPO_TOKEN }}
         pal-repo-name: rickyfitts/pr-jira-link@releases/v1
         input-used-by-other-action:
-          milliseconds: 2000
+        - milliseconds: 2000
