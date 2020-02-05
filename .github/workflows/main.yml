@@ -1,0 +1,13 @@
+name: test-workflow
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: rickyfitts/pr-jira-link@releases/v1
+      with:
+        milliseconds: 1000
