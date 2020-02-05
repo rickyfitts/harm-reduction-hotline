@@ -1,6 +1,8 @@
 name: test-workflow
 
 on: [push]
+  # pull_request:
+  #   types: [opened]
 
 jobs:
   build:
@@ -11,5 +13,6 @@ jobs:
     - uses: InVisionApp/private-action-loader@v3
       with:
         pal-repo-token: ${{ secrets.REPO_TOKEN }}
-        pal-repo-name: rickyfitts/pr-jira-link@releases/v1
+        pal-repo-name: rickyfitts/pr-jira-link@releases/v1 # redbrickmedia/infrastructure-common@...
+        # pal-action-directory: actions/pr-jira-link
         milliseconds: 2000
