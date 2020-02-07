@@ -13,3 +13,4 @@ jobs:
         pal-repo-token: ${{ secrets.REPO_TOKEN }}
         pal-repo-name: redbrickmedia/infrastructure-common@PUB-2705-pr-jira-link
         pal-action-directory: actions/pr-comment
+        comment-text: 'Reviewers: Check for package.lock.json changes!'
