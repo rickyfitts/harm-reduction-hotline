@@ -11,5 +11,5 @@ jobs:
     - uses: InVisionApp/private-action-loader@v3
       with:
         pal-repo-token: ${{ secrets.REPO_TOKEN }}
-        pal-repo-name: redbrickmedia/infrastructure-common
+        pal-repo-name: redbrickmedia/infrastructure-common@PUB-2705-pr-jira-link
         pal-action-directory: actions/pr-comment
