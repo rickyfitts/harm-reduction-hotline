@@ -15,5 +15,5 @@ jobs:
         pal-action-directory: actions/pr-comment
         jira-username: jules.youngberg@rdbrck.com
         jira-password: ${{ secrets.JIRA_TOKEN }}
-        comment-text: 'Reviewers: Check for package.lock.json changes!'
+        comment-text: 'Extra stuff'
         
