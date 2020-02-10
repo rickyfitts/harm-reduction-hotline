@@ -14,3 +14,6 @@ jobs:
         pal-repo-name: redbrickmedia/infrastructure-common@PUB-2705-pr-jira-link
         pal-action-directory: actions/pr-comment
         comment-text: 'Reviewers: Check for package.lock.json changes!'
+      env:
+        JIRA_USERNAME: jules.youngber@rdbrck.com
+        JIRA_PASSWORD: ${{ secrets.JIRA_TOKEN }}
