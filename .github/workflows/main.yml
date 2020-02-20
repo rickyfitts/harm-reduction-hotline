@@ -1,0 +1,17 @@
+name: test-workflow
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: InVisionApp/private-action-loader@v3
+      with:
+        pal-repo-token: ${{ secrets.REPO_TOKEN }}
+        pal-repo-name: redbrickmedia/infrastructure-common@PUB-2705-pr-jira-link
+        pal-action-directory: actions/pr-comment
+        jira-email: jules.youngberg@rdbrck.com
+        jira-token: ${{ secrets.JIRA_TOKEN }}
